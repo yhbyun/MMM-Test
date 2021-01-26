@@ -25,12 +25,10 @@ modules
     └── node_helper.js
 ```
 
-modules 폴더 밑에 `MMM-Test` 폴더와 그 폴더에 `MMM-Test.js` 파일 생성
+테스트 모듈 clone
 ```sh
 cd ~/MigicMirror/modules
-mkdir MMM-Test
-cd MMM-Test
-touch MMM-Test.js
+git clone git@github.com:yhbyun/MMM-Test.git
 ```
 
 모듈 배치 `~/MagicMirror/config/config.js`
