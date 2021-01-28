@@ -68,4 +68,6 @@ Module.register('MMM-Test', {
 ### Reference
 
 * [Head first developing MM module for extreme beginners](https://forum.magicmirror.builders/topic/8534/head-first-developing-mm-module-for-extreme-beginners)
+* [3rd Party Modules](https://github.com/MichMich/MagicMirror/wiki/3rd-party-modules)
+* [MagicMirror-Module-Template](https://github.com/roramirez/MagicMirror-Module-Template)
 * [SampleModule](https://github.com/sdetweil/SampleModule)
