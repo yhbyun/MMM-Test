@@ -8,11 +8,50 @@
 ### 개발 환경 구축
 
 ```sh
-git clone git@github.com:MichMich/MagicMirror.git
+git clone https://github.com/MichMich/MagicMirror.git
 cd MagicMirror
 npm install
 npm start dev
 ```
+
+다음과 비슷한 화면이 출력된 다음 MagicMirror 브라우저(정확히는 electron 앱)가 실행됩니다.
+
+```
+> npm start dev
+
+> magicmirror@2.14.0 start /Users/yhbyun/work/_working/MagicMirror
+> DISPLAY="${DISPLAY:=:0}" ./node_modules/.bin/electron js/electron.js "dev"
+
+[01.02.2021 22:54.29.722] [LOG]   Starting MagicMirror: v2.14.0
+[01.02.2021 22:54.29.730] [LOG]   Loading config ...
+[01.02.2021 22:54.29.733] [LOG]   Loading module helpers ...
+[01.02.2021 22:54.29.734] [LOG]   No helper found for module: alert.
+[01.02.2021 22:54.29.853] [LOG]   Initializing new module helper ...
+[01.02.2021 22:54.29.855] [LOG]   Module helper loaded: updatenotification
+[01.02.2021 22:54.29.856] [LOG]   No helper found for module: clock.
+[01.02.2021 22:54.29.856] [LOG]   No helper found for module: currentweather.
+[01.02.2021 22:54.29.856] [LOG]   No helper found for module: weatherforecast.
+[01.02.2021 22:54.30.387] [LOG]   Initializing new module helper ...
+[01.02.2021 22:54.30.387] [LOG]   Module helper loaded: newsfeed
+[01.02.2021 22:54.30.389] [LOG]   Initializing new module helper ...
+[01.02.2021 22:54.30.390] [LOG]   Module helper loaded: MMM-BackgroundSlideshow
+[01.02.2021 22:54.30.390] [LOG]   All module helpers loaded.
+[01.02.2021 22:54.30.470] [LOG]   Starting server on port 8090 ...
+[01.02.2021 22:54.30.480] [LOG]   Server started ...
+[01.02.2021 22:54.30.480] [LOG]   Connecting socket for: updatenotification
+[01.02.2021 22:54.30.481] [LOG]   Connecting socket for: newsfeed
+[01.02.2021 22:54.30.481] [LOG]   Starting node helper for: newsfeed
+[01.02.2021 22:54.30.481] [LOG]   Connecting socket for: MMM-BackgroundSlideshow
+[01.02.2021 22:54.30.482] [LOG]   Sockets connected & modules started ...
+[01.02.2021 22:54.30.538] [LOG]   Launching application.
+```
+
+![](https://github.com/yhbyun/publisher-meetup/raw/master/images/magic-mirror-shot1.png)
+
+현재 `config.js` 파일이 없다는 오류가 뜨고 있습니다. `config` 폴더의 `config.js.sample`을 `config.js`로
+복사하시고 MagicMirror 브라우저를 새로 고침하시면 화면이 뜹니다.
+
+![](https://github.com/yhbyun/publisher-meetup/raw/master/images/copy-config.jpg)
 
 ### 테스트 모듈 개발
 
