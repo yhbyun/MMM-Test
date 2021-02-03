@@ -2,15 +2,19 @@
 
 ### 요구사항
 
+다음이 설치되어 있어야 합니다.
 * Node.js version 10 이상
 * git
 
 ### 개발 환경 구축
 
 ```sh
+# MagicMirror 소스 받기
 git clone https://github.com/MichMich/MagicMirror.git
 cd MagicMirror
+# MagicMirror가 필요로 하는 라이브러리 설치하기
 npm install
+# MagicMirror를 개발환경으로 실행하기
 npm start dev
 ```
 
@@ -53,9 +57,19 @@ npm start dev
 
 ![](https://github.com/yhbyun/publisher-meetup/raw/master/images/copy-config.jpg)
 
+**MagicMirror 종료하기**
+
+터미널에서 `Ctrl + C` 입력하시며 됩니다.
+
+**MagicMirror 다시 실행하기**
+
+```sh
+npm start dev
+```
+
 ### 테스트 모듈 개발
 
-폴더 구조
+모듈은 다음 폴더 구조를 갖습니다.
 ```
 modules
 └─── MMM-Test
@@ -64,14 +78,16 @@ modules
     └── node_helper.js
 ```
 
-테스트 모듈 clone
+제가 제작한 테스트 모듈을 써보시려면
 ```sh
-cd ~/MigicMirror/modules
+cd modules
 git clone git@github.com:yhbyun/MMM-Test.git
 ```
 
-모듈 배치 `~/MagicMirror/config/config.js`
+modules 폴더에 모듈 파일이 있다고 해서 MagicMirror가 자동으로 모듈을 인식하지 않습니다.
+`config/config.js` 파일의 `modules` 부분에 모듈을 추가해야 합니다.
 
+`config/config.js`
 ```js
 modules: [
     {
@@ -86,7 +102,9 @@ modules: [
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPdydg%2FbtqNDo1l1kg%2F3XqpwK85RbV2jNDtDeJyYK%2Fimg.jpg)
 
-`MMM-Test.js` 수정
+`config.js`를 수정한 뒤 MagicMirror 브라우저를 새로고침 하시면 추가된 모듈이 반영됩니다.
+
+`MMM-Test.js` 파일을 수정해서 원하시는 기능을 추가하시면 됩니다.
 ```js
 Module.register('MMM-Test', {
     defaults: {},
