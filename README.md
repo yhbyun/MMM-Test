@@ -14,7 +14,27 @@ git clone https://github.com/MichMich/MagicMirror.git
 cd MagicMirror
 # MagicMirror가 필요로 하는 라이브러리 설치하기
 npm install
-# MagicMirror를 개발환경으로 실행하기
+```
+
+윈도우에서는 다음을 실행하셔야 합니다.
+
+```sh
+cd fonts
+npm install
+cd ../vendor
+npm install
+cd ..
+```
+
+윈도우에서는 package.json을 수정해야 합니다.
+
+```
+7 번째 줄 변경 전 : "start": "DISPLAY=\"${DISPLAY:=:0}\" ./node_modules/.bin/electron js/electron.js",
+7 번째 줄 변경 후 : "start": "./node_modules/.bin/electron js/electron.js",
+```
+
+MagicMirror를 개발환경으로 실행하기
+```
 npm start dev
 ```
 
