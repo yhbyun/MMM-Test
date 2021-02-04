@@ -78,6 +78,7 @@ npm start dev
 
 ![](https://github.com/yhbyun/publisher-meetup/raw/master/images/copy-config.jpg)
 
+이런 화면이 보이면 개발 환경은 구축된 겁니다.
 
 ![](https://github.com/yhbyun/publisher-meetup/raw/master/images/sshot2.jpg)
 
@@ -91,6 +92,7 @@ npm start dev
 port: 8080,
 ```
 
+### 기타
 
 **MagicMirror 종료하기**
 
