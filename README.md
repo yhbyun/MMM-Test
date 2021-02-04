@@ -38,7 +38,7 @@ MagicMirror를 개발환경으로 실행하기
 npm start dev
 ```
 
-다음과 비슷한 화면이 출력된 다음 MagicMirror 브라우저(정확히는 electron 앱)가 실행됩니다.
+다음과 비슷한 화면이 출력된 다음 MagicMirror 브라우저(정확히는 electron 앱)가 실행됩니다. 빨간 오류 줄이 보일 겁니다.
 
 ```
 > npm start dev
@@ -48,6 +48,7 @@ npm start dev
 
 [01.02.2021 22:54.29.722] [LOG]   Starting MagicMirror: v2.14.0
 [01.02.2021 22:54.29.730] [LOG]   Loading config ...
+[01.02.2021 22:54.29.730] [ERROR] WARNING! Could not find config file. Please create one. Starting with default configuration.
 [01.02.2021 22:54.29.733] [LOG]   Loading module helpers ...
 [01.02.2021 22:54.29.734] [LOG]   No helper found for module: alert.
 [01.02.2021 22:54.29.853] [LOG]   Initializing new module helper ...
@@ -72,10 +73,24 @@ npm start dev
 
 ![](https://github.com/yhbyun/publisher-meetup/raw/master/images/magic-mirror-shot1.png)
 
-현재 `config.js` 파일이 없다는 오류가 뜨고 있습니다. `config` 폴더의 `config.js.sample`을 `config.js`로
+현재 `config.js` 파일이 없다는 오류가 보입니다. `config` 폴더의 `config.js.sample`을 `config.js`로
 복사하시고 MagicMirror 브라우저를 새로 고침하시면 화면이 뜹니다.
 
 ![](https://github.com/yhbyun/publisher-meetup/raw/master/images/copy-config.jpg)
+
+
+![](https://github.com/yhbyun/publisher-meetup/raw/master/images/sshot2.jpg)
+
+### 오류 대응
+
+![](https://github.com/yhbyun/publisher-meetup/raw/master/images/error1.jpg)
+
+`config/config.js`의 `port` 정보를 수정합니다.
+
+```json
+port: 8080,
+```
+
 
 **MagicMirror 종료하기**
 
